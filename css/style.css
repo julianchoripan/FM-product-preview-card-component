@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*Variables*/
+
+:root {
+  --color-green500: hsl(158, 36%, 37%);
+  --color-green700: hsl(158, 42%, 18%);
+  --color-black: hsl(212, 21%, 14%);
+  --color-grey: hsl(228, 12%, 48%);
+  --color-cream: hsl(30, 38%, 92%);
+  --color-white: hsl(0, 0%, 100%);
+}
+
+/*General styles*/
+
+body {
+  background-color: var(--color-cream);
+  font-family: "Montserrat", sans-serif;
+}
+
+h1,
+h2 {
+  font-family: "Fraunces", serif;
+  font-size: xx-large;
+}
+
+h1 {
+  color: var(--color-black);
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: var(--color-green500);
+}
+
+p,
+s {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--color-grey);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/*Container*/
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/*Main container + Hero*/
+
+main {
+  max-width: 375px;
+  margin: 0 auto;
+  background-color: var(--color-white);
+  border-radius: 10px;
+}
+
+#hero img {
+  display: block;
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/*Main info*/
+
+#main-container {
+  padding: 25px;
+}
+
+#main-container p:first-child {
+  margin-bottom: 5px;
+  font-size: smaller;
+}
+
+#price-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 20px;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  background-color: var(--color-green500);
+  color: var(--color-white);
+  font-weight: 500;
+  gap: 10px;
+}
+
+/*Desktop media query*/
+
+@media screen and (min-width: 1024px) {
+  /*General styles*/
+
+  h1,
+  h2 {
+    font-size: 2.5rem;
+    line-height: 1;
+  }
+
+  p,
+  button {
+    line-height: 1.75;
+    font-size: 1.05rem;
+  }
+
+  #main-container p:first-child,
+  #price-container,
+  h1,
+  h2,
+  s {
+    margin-bottom: 0;
+  }
+
+  /*Main container + Hero*/
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 700px;
+  }
+
+  #hero img {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 10px;
+  }
+
+  /*Main styles*/
+
+  #main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
+  }
+
+  /*Active states*/
+
+  button:hover {
+    background-color: var(--color-green700);
+    cursor: pointer;
+  }
+}
