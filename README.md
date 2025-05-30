@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Code](https://github.com/julianchoripan/FM-product-preview-card-component)
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/product-preview-card-component-rTMe1ojX9D)
 - Live Site URL: [Live site](https://julianchoripan.github.io/FM-product-preview-card-component/)
 
 ## My process
